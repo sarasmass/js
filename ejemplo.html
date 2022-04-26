@@ -24,9 +24,15 @@
 		<p id="nombre" class="asd" name="juan">aaaaaa</p>
 		<p class="kkkk">aaaaaa</p>
 		<p class="kkkk">aaaaaa</p>
+		<input type="color" id="color" /> <br />
+		<br />
+
 		<button onclick="cosa()">CLIC</button>
 		<button onclick="cosa1()">PPPPP</button>
 		<button onclick="cosa2()">aaaaaaa</button>
+		<button id="prueba" onclick="cosa3(document.getElementById('color').value)">
+			enviar color
+		</button>
 
 		<script>
 			function cosa() {
@@ -67,6 +73,10 @@
 			function cosa2() {
 				//solo una vez
 				document.getElementsByTagName("p")[4].classList.replace("azul", "rojo");
+			}
+			function cosa3(color) {
+				console.log(color);
+				document.getElementById("prueba").style.backgroundColor = color;
 			}
 		</script>
 	</body>
