@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
+		<style>
+			body {
+				background-color: grey;
+			}
+		</style>
+		<script type="text/javascript">
+			var num = prompt("introduce un numero ");
+
+			if (isNaN(num)) {
+				document.write(num + "no es un numero ");
+			} else {
+				document.write(num + "es un numero <br />");
+
+				if (num < 0) {
+					document.write(num + "es menor que 0");
+				} else if (num > 9999) {
+					document.write(num + "es mayor que 9999");
+				}
+			}
+		</script>
+	</head>
+</html>

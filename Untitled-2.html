@@ -10,30 +10,11 @@
 			}
 		</style>
 		<script type="text/javascript">
-			/*alert(
-				"Hola Mundo\! \nQué facil es incluir 'comillas simples'\ny \"comillas dobles\" "
-			);
-			console.log(
-				"Hola Mundo\! \nQué facil es incluir 'comillas simples'\ny \"comillas dobles\" "
-			);
-			$var = prompt("add text");
-			console.log($var);
-			console.warn();
-			console.error();
-			console.info();*/
-			/*alert(isNaN(prompt("ad number"))); // amb la ! es com posar el contari*/
-			var numero = prompt("introduceun número");
 			var numero1 = prompt("introduce tu número");
-			if (isNaN(numero)) {
+			if (!isNaN(numero)) {
 				document.write(numero + "is not a number");
 			} else {
 				document.write(numero + "is a number");
-			}
-
-			if (isNaN(numero1)) {
-				document.write(numero1 + "is not a number");
-			} else {
-				document.write(numero1 + "is a number");
 			}
 
 			var suma = parseInt(numero) + parseInt(numero1);
