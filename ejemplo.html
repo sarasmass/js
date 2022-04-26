@@ -8,22 +8,66 @@
 			button {
 				cursor: pointer;
 			}
+			.rojo {
+				background-color: red;
+			}
+			.azul {
+				background-color: blue;
+			}
 		</style>
 		<script src="./file.js"></script>
 	</head>
 	<body onload="">
 		<h1>jdskdsds</h1>
-		<p id="nombre" class="asd" name="juan">ssdsdsdsd</p>
-		<script>
-			document.getElementById("nombre").innerHTML = "asd"; //SUSTITUYE EL CONTENIDO
-			document.getElementById("nombre").innerHTML += "ASD"; // AÑADE TEXTO AL "NOMBRE"
-			document.getElementById("nombre").style.backgroundColor = "red";
-			typeof document.getElementsByName("nombre");
-			document.getElementsByClassName("asd").style.backgroundColor = "blue";
+		<p id="title" class="asd" name="juan">ssdsdsdsd</p>
+		<p class="asd" name="juan">jjjj</p>
+		<p id="nombre" class="asd" name="juan">aaaaaa</p>
+		<p class="kkkk">aaaaaa</p>
+		<p class="kkkk">aaaaaa</p>
+		<button onclick="cosa()">CLIC</button>
+		<button onclick="cosa1()">PPPPP</button>
+		<button onclick="cosa2()">aaaaaaa</button>
 
-			// document.getElementsByClassName() //asd
-			//  document.getElementsByName() // juan
+		<script>
+			function cosa() {
+				//document.getElementById("nombre").innerHTML = "asd"; //SUSTITUYE EL CONTENIDO
+				//document.getElementById("nombre").innerHTML += "ASD"; // AÑADE TEXTO AL "NOMBRE"
+				//document.getElementById("nombre").style.backgroundColor = "red";
+				//typeof document.getElementsByName("nombre");
+				//document.getElementsByClassName("asd").style.backgroundColor = "blue";
+				console.log(document.getElementsByClassName("asd"));
+				console.log(document.getElementsByClassName("asd")[0]);
+				document.getElementsByClassName("asd")[0].style.backgroundColor =
+					"blue";
+				console.log(document.getElementsByClassName("asd").length); // LENGTH CUENTA CUANTOS OBJETOS HAY
+				let $cantidad = document.getElementsByClassName("asd").length;
+				for (let $i = 0; $i < $cantidad; $i++) {
+					document.getElementsByClassName("asd")[$i].style.backgroundColor =
+						"green";
+					console.log("$i=" + $i);
+				}
+				//  document.getElementsByName() // juan
+				document.getElementsByTagName("p")[0].innerHTML = "AAA";
+				document.getElementsByTagName("p")[3].classList.add("rojo");
+				document.getElementsByTagName("p")[3].classList.remove("kkk");
+				document.getElementsByTagName("p")[4].classList.add("rojo");
+				document.getElementsByTagName("p")[4].classList.replace("azul", "rojo");
+			}
+
+			let $a = 0;
+			let $text = document.getElementsByTagName("p")[4];
+			function cosa1() {
+				$a++;
+				if ($a % 2 == 0) {
+					$text.classList.replace("azul", "rojo");
+				} else {
+					$text.classList.replace("rojo", "azul");
+				}
+			}
+			function cosa2() {
+				//solo una vez
+				document.getElementsByTagName("p")[4].classList.replace("azul", "rojo");
+			}
 		</script>
-		S
 	</body>
 </html>
