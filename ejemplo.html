@@ -30,7 +30,10 @@
 		<button onclick="cosa()">CLIC</button>
 		<button onclick="cosa1()">PPPPP</button>
 		<button onclick="cosa2()">aaaaaaa</button>
-		<button id="prueba" onclick="cosa3(document.getElementById('color').value)">
+		<button
+			id="prueba"
+			onclick="cosa3(document.getElementById('color').value, this)"
+		>
 			enviar color
 		</button>
 
@@ -74,7 +77,12 @@
 				//solo una vez
 				document.getElementsByTagName("p")[4].classList.replace("azul", "rojo");
 			}
-			function cosa3(color) {
+
+			         function cosa3(color, boton) {
+			        console.log(color);
+			        boton.style.backgroundColor = color;
+			                  }
+			         /**function cosa3(color) {
 				console.log(color);
 				document.getElementById("prueba").style.backgroundColor = color;
 			}

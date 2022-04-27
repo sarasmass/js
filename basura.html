@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>js archivo</title>
+		
+	<body>
+		adsaddadsdadsada
+		<br />
+		<br />
+		<script>
+			// let $juan=2,$asd=3,$abc = "a";
+			//          var bbb;
+			//          const _asd;
+			// let $number = 9.15654;
+			// document.write($number.toPrecision(4)); // el numero (4) es para indicar numero de decimales del redondeo
+			// document.write("<br />");
+			// document.write("<br />");
+			// document.write(5e2); // 5 multiplicado x e (10) elevado a 2
+			// numeroOld = "6";
+			// numero = Number(numeroOld);
+			// document.write(numero + 1);
+			// document.write("<br><br>");
+			// document.write("a=" + numero.valueOf());
+			// document.write("<br><br>");
+			// document.write(parseInt("6") + parseInt("2"));
+			// Number();
+
+			// document.write(Number(new Date("1970-01-01")));
+			// document.write("<br><br>");
+			// document.write(Number(new Date("1970-01-02")));
+			// document.write("<br><br>");
+			// hoy = Number(new Date("2022-04-27"));
+			// document.write(hoy);
+			// document.write("<br><br>");
+			// ayer = hoy - 86400000 * 30;
+			// document.write(new Date(ayer));
+			// document.write("<br><br>");
+			// document.write(parseFloat("10.33") + parseFloat("10.33"));
+			// document.write("<br><br>");
+			// document.write(parseFloat("10 years"));
+			// document.write("<br><br>");
+			// document.write(Number.MAX_VALUE);
+			// document.write("<br><br>");
+			// document.write(Number.MIN_VALUE);
+			// document.write("<br><br>");
+			// document.write(Number.POSITIVE_INFINITY);
+			// document.write("<br><br>");
+			// document.write(Number.NEGATIVE_INFINITY);
+			// document.write("<br><br>");
+			// document.write(Number.NaN);
+			// let $car = { type: "BMW", model: "E30", color: "Violeta" };
+			// document.write(car.type);
+			// document.write("<br><br>");
+			// document.write(car["type"]);
+			car1 = {
+				type: "BMW",
+				model: "E30",
+				color: "Violeta",
+				age: 20,
+				matriculas: ["6857FCB", "7664XBC", "656722TBF"],
+				altura: 1.75,
+				repetir: function () {
+					return this.type + " " + this.model;
+				},
+			};
+			car2 = {
+				type: "BMW",
+				model: "E30",
+				color: "Violeta",
+				age: 20,
+			};
+			document.write(car1.type);
+			document.write("<br><br>");
+			document.write(car1["type"]);
+			document.write("<br><br>");
+			document.write(car1.altura);
+			document.write("<br><br>");
+			document.write(car1.repetir());
+			document.write(car1.matriculas[0]);
+			document.write("<br><br>");
+			document.write(car1.matriculas[0]);
+			document.write("<br><br>");
+			
+            let cantidad = car1.matriculas.length;
+			console.log(cantidad);
+            
+            for (let i = 0; i < cantidad; i++) {
+                document.write(car1.matriculas[i] + "<br>");}
+            let a=0;
+            while (a<cantidad){
+                document.write(car1.matriculas[a++] + "<br>")
+            }
+            
+		</script>
+	</body> 
+</html>
