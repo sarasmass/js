@@ -7,7 +7,21 @@
 		<p id="p_4">p_4</p>
 		<button onclick="fun1()">1</button>
 		<button onmouseover="fun2()" onmouseout="fun3()">2</button>
+		<form action="a.html" name="myform" method="get" target="_blank">
+			Nam:
+			<input
+				type="text"
+				name="fname"
+				onmouseout="validateForm()"
+				onkeyup="valeidateForm()"
+			/>
+			<input type="submit" id="submit" value="Submit" disabled />
+		</form>
 		<script>
+			/**function validateForm(){
+				cosole.log("cosa");
+				let x document.form ["myForm"]
+			}*/
 			function fun1() {
 				document.getElementById("p_1").style.backgroundColor = "blue";
 			}
@@ -17,9 +31,10 @@
 			function fun3() {
 				document.getElementById("p_3").style.backgroundColor = "yellow";
 			}
-			function fun3() {
+			function fun4() {
 				document.getElementById("p_4").style.backgroundColor = "red";
 			}
 		</script>
+		<button onclick="window.print()">imprimir</button>
 	</body>
 </html>
