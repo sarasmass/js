@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio10bis</title>
+	</head>
+	<style>
+		.r1 {
+          background-color: yellow;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+		}
+	</style>
+<div style="background-color: red;"onmouseover="verde(this)" onmouseout="rojo(this)"  class="r1"></div>
+<div onmouseover="verde(this)" onmouseout="amarillo(this)"  class="r1"></div>
+<div style="background-color: blue;" onmouseover="verde(this)" onmouseout="azul(this)"  class="r1"></div>
+<div onmouseover="verde(this)" onmouseout="amarillo(this)"  class="r1"></div>
+<div style="background-color: orange;"onmouseover="verde(this)" onmouseout="naranja(this)"  class="r1"></div>
+
+
+<script>
+     document.bgColor="green"
+    function verde(x) {
+    x.style.backgroundColor = "green";
+    }
+
+    function amarillo(x) {
+    x.style.backgroundColor = "yellow";
+    }
+    function azul(x) {
+    x.style.backgroundColor = "blue";
+    }
+    function rojo(x) {
+    x.style.backgroundColor = "red";
+    }
+    function naranja(x) {
+    x.style.backgroundColor = "orange";
+    }
+    
+</script>
+
+</body>
+</html>

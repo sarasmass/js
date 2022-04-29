@@ -9,9 +9,23 @@
 		<script>
 			var text1 = prompt("introduce un texto");
 			var text2 = prompt("introduce un texto");
-			if (isNaN(text1, text2)) {
-				document.write(text1.toLowerCase() + text2.toLowerCase());
+			/*if (isNaN(text1, text2)) {
+				document.write(
+					text1.toLowerCase().replace(/\s+/g, "") +
+						text2.toLowerCase().replace(/\s+/g, "").split()
+				);
 			}
+			document.write(text1.length + text2.length);
+			document.write(text1.split() + text2.split());*/
+			if (isNaN(text1)) {
+				document.write(text1.length.toLowerCase().replace(/\s+/g, ""));
+			}
+			if (isNaN(text2)) {
+				document.write(text2.length.toLowerCase().replace(/\s+/g, ""));
+			}
+
+			document.write(text1.length + text2.length);
+			document.write(text1.split() + text2.split());
 		</script>
 	</body>
 </html>
