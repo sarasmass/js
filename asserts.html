@@ -1,21 +1,14 @@
 <html>
 	<head>
 		<script>
-			/**
-			 * ! pedirNumero()
-			 * ! Función que usa un prompt para solicitar un número
-			 * ! cuando lo obtenga enviara la información a la función "checkNumber()"
-			 * ! segun el return que tenga pintara en pantalla el número o no
-			 * return: text
-			 **/
-			function pedirNumero($p_texto) {
-				let prompt_number = prompt("add number");
-				if (checkNumber(prompt_number) != false) {
+			function pedirtexto($p_texto) {
+				let prompt_tetxo = prompt("add texto");
+				if (checktexto(prompt_texto) != false) {
 					//$p_texto.innerHTML += prompt_number + "<br>";
-					return prompt_number + "<br>";
+					return prompt_tetxo + "<br>";
 				} else {
 					//$p_texto.innerHTML += "No es un numero valido<br>";
-					return '<b>"' + prompt_number + '"</b> No es un número válido<br>';
+					return '<b>"' + prompt_texto + '"</b> No es un texto válido<br>';
 				}
 			}
 
@@ -27,33 +20,29 @@
 			 * return: false
 			 * return: number
 			 **/
-			function checkNumber(prompt_number) {
+			function checktexto(prompt_tetxo) {
 				/**
-                 * ! Zona de logs
-                    console.log(
-                        '"' + prompt_number + '" != "" ==> ' + (prompt_number != "")
-                    );
-                    console.log(
-                        '!isNaN("' + prompt_number + '") ==> ' + !isNaN(prompt_number)
-                    );
-                    console.log('"' + prompt_number + '" < 0 ==> ' + (prompt_number < 0));
-                    console.log(
-                        '"' + prompt_number + '" > 99999999 ==> ' + (prompt_number > 99999999)
-                    );
-                    console.warn(
-                        "All ==> " +
-                            (prompt_number != "" &&
-                                !isNaN(prompt_number) &&
-                                (prompt_number < 0 || prompt_number > 99999999))
-                    );
-                **/
-				if (
-					prompt_number != "" &&
-					!isNaN(prompt_number) &&
-					(prompt_number < 0 || prompt_number > 99999999)
-				) {
+			              * ! Zona de logs
+			                 console.log(
+			                     '"' + prompt_tetxo) + '" != "" ==> ' + (prompt_tetxo) != "")
+			                 );
+			                 console.log(
+			                     '!isNaN("' + prompt_tetxo) + '") ==> ' + !isNaN(prompt_tetxo)
+			                 );
+			                 console.log('"' + prompt_tetxo) + '" < 0 ==> ' + (prompt_tetxo) < 0));
+			                 console.log(
+			                     '"' + prompt_tetxo) + '" > 99999999 ==> ' + (prompt_tetxo) > 99999999)
+			                 );
+			                 console.warn(
+			                     "All ==> " +
+			                         (prompt_tetxo) != "" &&
+			                             !isNaN(prompt_tetxo) &&
+			                             (prompt_number < 0 || prompt_number > 99999999))
+			                 );
+			             **/
+				if (prompt_tetxo != "" && !isNaN(prompt_tetxo)) {
 					//solo numeros
-					return prompt_number;
+					return prompt_texto;
 				} else {
 					return false;
 				}
@@ -63,19 +52,15 @@
 			 * ! Zona Assert:
 			 * ! Test de que la funcion realiza la tarea requerida
 			 **/
-			console.assert(checkNumber("") == false, "");
-			console.assert(checkNumber("a") == false, "");
-			console.assert(checkNumber(-1) == -1, "");
-			console.assert(checkNumber(-4) == -4, "");
-			console.assert(checkNumber(1) == false, "");
-			console.assert(checkNumber(999999999) == 999999999, "");
+			console.assert(checktexto("") == false, "");
+			console.assert(checktexto("a") == false, "");
 		</script>
 	</head>
 
 	<body>
 		<p id="texto"></p>
-		<button onclick="document.getElementById('texto').innerHTML+=pedirNumero()">
-			pedir numero
+		<button onclick="document.getElementById('texto').innerHTML+=pedirtexto()">
+			pedir texto
 		</button>
 		<script></script>
 	</body>

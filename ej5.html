@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 5 </title>
+		<style>
+			body {
+				background-color: grey;
+			}
+		</style>
+		<script type="text/javascript">
+			function comparar() {
+				var primerValor = prompt("introduce el primer numero");
+
+				if (parseInt(primerValor) >= 10) {
+					document.write(primerValor + "es mas grande que 10");
+				} else if (isNaN(primerValor)) {
+					document.write(primerValor + "no es un numero");
+				} else {
+					document.write(primerValor + "es mas pequeño que 10");
+				}
+			}
+			comparar()
+       
+			console.assert(comparar("5") == true, "");
+		
+</script>
+	<body></body>
+</html>

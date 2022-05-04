@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 4</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var $texto = prompt("introduce un numero");
+			if (isNaN($texto)) {
+				document.write($texto.toUpperCase($texto));
+			} else {
+				document.write($texto + "no es un texto");
+			}
+
+			function checkNumber($texto) {
+				// console.log('"' + $texto + '" != "" ==> ' + ($texto != ""));
+				// console.log('!isNaN("' + $texto + '") ==> ' + !isNaN($texto));
+				// console.log('"' + $texto + '" < 0 ==> ' + ($texto < 0));
+				// console.warn(
+				//  "All ==> " +
+				//      ($texto != "" &&
+				//          !isNaN($texto)
+				// );
+
+				if ($texto != "" && !isNaN($texto)) {
+					//solo numeros
+					return $texto;
+				} else {
+					return false;
+				}
+			}
+			console.assert(checkNumber("") == false, "");
+			console.assert(checkNumber("a") == false, "");
+			console.assert(!isNaN("1") == true, "");
+		</script>
+	</body>
+</html>

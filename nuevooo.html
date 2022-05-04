@@ -1,22 +1,21 @@
-
-</html>
 <html>
 	<head>
 		<script>
 			function funcion1($texto) {
 				if ($texto != "" && !isNaN($texto)) {
-					if ($texto % 2 == 0) {
-						return $texto + "es un numero par";
+					if ($texto > 10) {
+						return $texto + "mayor a 10";
 					}
-					return $texto + "es un numero impar<br>";
+					return $texto + "menor a 10<br>";
 				} else {
 					return false;
 				}
 			}
 			console.assert(funcion1("") == false); //error
 			console.assert(funcion1("a") == false);
-			console.assert(funcion1(3) == 3 + "es un numero impar<br>");
-			console.assert(funcion1(12) == 12 + "es un numero par");
+			console.assert(funcion1(-4) == -4 + "menor a 10<br>");
+			console.assert(funcion1(3) == 3 + "menor a 10<br>");
+			console.assert(funcion1(12) == 12 + "mayor a 10");
 		</script>
 	</head>
 	<body>
