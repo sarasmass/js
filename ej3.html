@@ -3,26 +3,36 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
-		<style>
-			body {
-				background-color: grey;
-			}
-		</style>
+		<title>Ejercicio 3 - Mostrar mensajes complejos</title>
+	</head>
+	<body>
 		<script type="text/javascript">
-			var num = prompt("introduce un numero ");
+			//var numero1 = prompt("introduce un numero");
+			//var numero2 = prompt("introduce un numero");
+			function funcion1(numero1, numero2) {
+				if (isNaN(numero1)) {
+					document.write(numero1 + "is not a number <br />");
+				} else {
+					document.write(numero1 + "is a number <br />");
+				}
 
-			if (isNaN(num)) {
-				document.write(num + "no es un numero ");
-			} else {
-				document.write(num + "es un numero <br />");
-
-				if (num < 0) {
-					document.write(num + "es menor que 0");
-				} else if (num > 9999) {
-					document.write(num + "es mayor que 9999");
+				if (isNaN(numero2)) {
+					document.write(numero2 + "is not a number <br />");
+				} else {
+					document.write(numero2 + "is a number <br />");
 				}
 			}
+			var suma = parseInt(numero1) + parseInt(numero2);
+			document.write(numero1 + "+" + numero2 + "=" + suma);
+
+			console.assert(funcion1("a") == false);
+			console.assert(funcion1("") == false);
 		</script>
-	</head>
+		<button
+			id="prueba"
+			onclick="funcion1(document.getElementById('color').value, this)"
+		>
+			enviar color
+		</button>
+	</body>
 </html>

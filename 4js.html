@@ -1,31 +1,50 @@
-
-<!DOCTYPE html>
-<html lang="es">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Ejercicio 1 - Mostrar mensajes complejos</title>
-		<style>
-			body {
-				background-color: grey;
+		<script>
+			function funcion1($numero, $numero2) {
+				if (
+					$numero != "" &&
+					!isNaN($numero) &&
+					$numero2 != "" &&
+					!isNaN($numero2)
+				) {
+					let $suma = parseInt($numero) + parseInt($numero2);
+					return $numero + "+" + $numero2 + "=" + $suma;
+				} else {
+					return false;
+				}
 			}
-		</style>
-        	<body>
-		<script type="text/javascript">
-			function pedir_numero{
-			var text = prompt("introduce un texto ");
-
-			if (isNaN(text)) {
-				document.write(text.toUpperCase(text) + "es un texto <br /> ");
-			} else {
-				document.write(text + "no es un texto <br />");
-			}
-		}
-		
-			console.assert(text("") == false, "");
-			console.assert(text("a") == false, "");
-			console.assert(!isNaN(text) == false, "");
+			console.assert(funcion1("", "") == false); //error
+			console.assert(funcion1("a", "bbn") == false);
+			console.assert(funcion1("abc") == false);
+			console.assert(funcion1("a12b") == false);
+			console.assert(funcion1("ABC") == false);
+			console.assert(funcion1(4, 8) == 4 + "+" + 8 + "=" + 12); //error
+			console.assert(funcion1(-4, 8) == -4 + "+" + 8 + "=" + 4); //error
 		</script>
-		
+	</head>
+	<body>
+		<p id="cosa"></p>
+		<br />
+		<button
+			onclick="
+            document.getElementById('cosa').innerHTML+=funcion1(prompt('add un numero1'),prompt('add un numero2'))"
+		>
+			<p>pedir numero</p>
+		</button>
 	</body>
 </html>
+
+<!-- if (
+    $numero != "" &&
+    !isNaN($numero) 
+    if( 2%==0){es par}
+        
+    {
+        
+        return $impar 
+} else {
+    return false; erroorr
+}
+}
+ -->

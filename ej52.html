@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script>
+			function pedirNumero($p_texto) {
+				let prompt_number = prompt("add number");
+				if (checkNumber(prompt_number) != false) {
+					if (prompt_number > 10) {
+						return prompt_number + "es mayor que 10";
+					}
+					return prompt_number + "<br>";
+				} else {
+					return '<b>"' + prompt_number + '"</b> No es un número válido<br>';
+				}
+			}
+
+			/*	function checkNumber(prompt_number) {
+				if (prompt_number != "" && !isNaN(prompt_number)) {
+					//solo numeros
+					return prompt_number;
+				} else if (prompt_number > 10) {
+					return prompt_number + "es mayor que 10";
+				} else {
+					return false;
+				}
+			}
+
+			console.assert(checkNumber("") == false, "");
+			console.assert(checkNumber("a") == false, "");
+			console.assert(checkNumber(-1) == -1, "");
+			console.assert(checkNumber(-4) == -4, "");
+			console.assert(checkNumber(5) == 5, "");*/
+		</script>
+	</head>
+
+	<body>
+		<p id="texto"></p>
+		<button onclick="document.getElementById('texto').innerHTML+=pedirNumero()">
+			pedir numero
+		</button>
+		<script></script>
+	</body>
+</html>
