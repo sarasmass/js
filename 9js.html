@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Ejercicio 8</title>
-	</head>
-	<body>
-		<script>
-			alert(info("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
-			alert(info("En un lugar de la mancha..."));
-		</script>
-	</body>
+
+<head>
+    <title>Ejercicio 9</title>
+
+    <script type="text/javascript">
+        function funcion1(frase) {
+            var resultado = 'La frase "' + frase + '" ';
+
+			if (frase != "" && isNaN(frase)) {
+				
+			
+            if (frase == frase.toUpperCase()) {
+                resultado += " son mayúsculas";
+            } else if (frase == frase.toLowerCase()) {
+                resultado += " son minúsculas";
+            } else {
+                resultado += " son mayúsculas y minúsculas";
+            }return resultado;
+		} else return false;
+            
+        }
+
+        // alert(funcion1("OVNI = OBJETO VOLADOR NO IDENTIFICADO"));
+        // alert(funcion1("En un lugar de la mancha..."));
+
+        console.assert(
+            funcion1("OVNI = OBJETO VOLADOR NO IDENTIFICADO") ==
+                'La frase "OVNI = OBJETO VOLADOR NO IDENTIFICADO"  son mayúsculas'
+        );
+        console.assert(
+            funcion1("OVNI = OBJETO VOLADOR NO IDENTIFICADO") ==
+                'La frase "OVNI = OBJETO VOLADOR NO IDENTIFICADO"  son mayúsculas'
+        );
+        console.assert(funcion1("a") == 'La frase "a"  son minúsculas');
+        console.assert(funcion1("B") == 'La frase "B"  son mayúsculas');
+		console.assert(funcion1("3") == false);
+		console.assert(funcion1("") == false);
+        // console.log(funcion1("a"));
+    </script>
+</head>
+<body>
+	
+	<p id="cosa"></p>
+    <button onclick="alert(funcion1('OVNI = OBJETO VOLADOR NO IDENTIFICADO'))">
+        Boton
+    </button>
+    <button onclick="alert(funcion1('En un lugar de la mancha...'))">
+        Boton
+    </button>
+    <button onclick="document.getElementById('cosa').innerHTML+=funcion1(prompt('add un texto'))">Boton</button>
+</body>
 </html>

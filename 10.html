@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Ejercicio 10</title>
+		<script>
+			var text1 = prompt("introduce un texto");
+			var text2 = prompt("introduce un texto");
+			var text3 = text1 + text2;
+
+			document.write(
+				text1.toLowerCase().replace(/\s+/g, "") +
+					";" +
+					text2.toLowerCase().replace(/\s+/g, "")
+			);
+
+			document.write(text3.length);
+			document.write(text3.split());
+		</script>
+	</head>
+	<body></body>
+</html>
