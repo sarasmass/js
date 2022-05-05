@@ -1,0 +1,29 @@
+<html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Ej10</title>
+			<script>
+				function splits(texto, texto2) {
+					let vars = texto + ";" + texto2;
+					let contar = vars.length;
+					document.write(vars + "=" + contar + "<br>");
+					let loremus = vars.split(";");
+					document.write(loremus[0] + "=" + contar + "<br>");
+				}
+			</script>
+		</head>
+		<body>
+			<p id="cosa"></p>
+			<button
+				onclick="
+                document.getElementById('cosa').innerHTML=splits(prompt('Escribe un text'),prompt('Escribe otro texto'))"
+			>
+				<p>Es un boton</p>
+			</button>
+		</body>
+	</html>
+</html>
