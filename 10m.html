@@ -9,6 +9,7 @@
 			<script>
 				function splits(texto, texto2) {
 					let vars = texto + ";" + texto2;
+					vars = vars.toLowerCase();
 					let contar = vars.length;
 					document.write(vars + "=" + contar + "<br>");
 					let loremus = vars.split(";");
