@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script>
+			// ejerccio 5
+			// 1: pide un numero
+			// 2: comprueba que es un numero
+			// 3: un if para saber si es mayora 1 o no
+
+			function name1(params, param1, param2) {
+				let total, spliter, var3, var4, var5;
+				console.log(params);
+				total = Number(param1) + parseInt(param2);
+				var1 = param1 + "+" + param2 + "=" + total;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="inputId" value="ASD" />
+		<button sonclick="name1(document.getElementById('inputId').value,1,2)">
+			click
+		</button>
+		<script>
+			function funcionx(param1, param2) {
+				alert(param1 + param2);
+			}
+			function funcionD(param1) {
+				alert(param1);
+			}
+		</script>
+		<button onclick="alert(prompt('dame algo')+ prompt('text2'))">promt</button>
+		<button onclick="funcionx(prompt('dame algo'), prompt('text2'))">
+			promt
+		</button>
+		<button onclick="funcionD(prompt('dame algo')+ prompt('text2'))">
+			promt
+		</button>
+	</body>
+</html>
