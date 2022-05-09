@@ -5,52 +5,55 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=, initial-scale=1.0" />
 		<title>Document</title>
+		<style>
+			.mal{
+				background-color: red;
+			}
+		</style>
 	</head>
 	<body>
-		<script>
-			/*
-            () condicion/ parametros
-            {} Ejecucion/ funciom
-            [] Aray
-            3-integrales
-            asd-string
-            true/false - boolean
-            NaN - 10/a
-            undefined
-            3.6 float- numero con una coma
-            
-            
-			function asd() {
-				console.log(3 + 6);
+
+
+		<form >
+			<label> operacion matematica</label>
+			<input onkeyup="uno(this.value)"> </input>
+			<input id="salida"disabled></input>
+		<div>
+			<label>Nombre:</label><input name="nyd" type="text" id="nyd"/><br>
+		</div>
+		
+		<label for="">Email</label>
+		<input type="mail" id ="valor">
+		<div>
+		<input type="button" onclick="pregunta() +validarEmail()"value="Enviar"/>
+	</div>
+		</form>
+		<script type="text/javascript">
+			function uno(numero){
+				if (numero > 0){
+					
+					document.getElementById("salida").style.color = "green";
+				}else if(numero < 0){
+					document.getElementById("salida").style.color = "red";
+				}
+			document.getElementById("salida").value=eval(numero)
+		}
+			function pregunta(){
+			let apellidos = document.getElementsByName('nyd')[0].value;
+			
+			if (confirm("¿Es usted " +nyd+"?")){
+			;
 			}
-            console.log(5==5);
-            console.log(3==5);
-            $var = 84;
-            console.log($var);
-
-
-			if (3 == 6) {
-				console.log("3==6");
-			} else if (2 == 2) {
-				console.log("2==2");
+		}
+			function validarEmail() {
+				let valor=document.getElementById('valor').value
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+			alert("La dirección de email " + valor + " es correcta.");
 			} else {
-				console.log("else");
+			alert("La dirección de email es incorrecta.");
 			}
-
-            if(){}
-            if(){}else{}
-            if(){}else if(){}
-            if(){}else if(){}else if(){}
-            if(){}else if(){}else if(){}else}{}*/
-			$var5 = 1;
-			while ($var5 < 8) {
-				console.log($var5);
-				$var5++;
 			}
-			for ($i = 1; $i < 10; $i++) {
-				console.log($i);
-			}
-			asd = [1, 2, 3, 4];
+		
 		</script>
 	</body>
 </html>

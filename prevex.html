@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+        .error {
+            background-color: red;
+        }
+        
+        .correcto {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form>
+        <label> operacion matematica</label>
+        <input onkeyup="uno(this.value)"> </input>
+        <input id="salida" disabled></input>
+        <input type="submit">
+    </form>
+    <script>
+        function uno(numero) {
+            document.getElementById("salida").value = eval(numero)
+        }
+    </script>
+    <form class="formulario">
+        <div>
+            <label>Nombre:</label><input name="nombre" type="text" id="nombre" /><br>
+        </div>
+        <div>
+            <label> 1er Apellido:</label><input name="apellido1" type="text" id="apellido1">
+        </div>
+        <div>
+            <label> 2o Apellido:</label><input name="apellido2" type="text" id="apellido2">
+        </div>
+        <input type="submit" onclick="pregunta()" value="Enviar" />
+    </form>
+    <script type="text/javascript">
+        const datos = {
+            nombre: '',
+            apellido1: '',
+            apellido2: ''
+        }
+        const nombre = document.querySelector('#nombre');
+        const apellido1 = document.querySelector('#apellido1');
+        const apellido2 = document.querySelector('#apellido2');
+
+        nombre.addEventListener('input', leerTexto)
+        apellido1.addEventListener('input', leerTexto)
+        apellido2.addEventListener('input', leerTexto)
+
+        function pregunta() {
+
+            let apellido1 = document.getElementsByName('apellido1')[0].value;
+            let apellido2 = document.getElementsByName('apellido2')[0].value;
+            let apellidos = apellido1 + " " + apellido2;
+            let nombre = document.getElementsByName('nombre')[0].value;
+            if (confirm("¿Es usted " + apellidos + ", " + nombre + "?")) {
+                document.tuformulario.submit();
+            }
+        }
+
+        function leerTexto(input, e) {
+            datos[e.target.id] = e.target.value
+            var inputVal = document.getElementById(input);
+
+            if (inputVal.value == "") {
+                inputVal.style.backgroundColor = "red";
+            } else {
+                inputVal.style.backgroundColor = "";
+            }
+        }
+
+        leerTexto(nombre);
+        leerTexto(apellido1);
+        leerTexto(apellido2);
+    </script>
+</body>
+
+</html>
